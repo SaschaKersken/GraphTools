@@ -1,0 +1,22 @@
+from tree import Tree
+from graph_tools import is_bipartite
+
+tree = Tree('A')
+tree.root.add_successor('B')
+tree.root.add_successor('C')
+tree.root.add_successor('D')
+tree.root.successors[1].add_successor('E')
+tree.root.successors[1].add_successor('F')
+tree.root.successors[1].successors[0].add_successor('G')
+print(tree)
+print(f"Blätter: {tree.leaves}, Tiefe: {tree.depth}")
+print(tree.graph)
+print("Existierender Pfad:")
+print(tree.path(1, 1).value if tree.path(1, 1) else "Gibt es nicht")
+print("Falscher Pfad:")
+print(tree.path(2, 1).value if tree.path(2, 1) else "Gibt es nicht")
+print("Bipartit (sind alle Bäume)?")
+print(is_bipartite(tree.graph))
+print(tree.graph.vertices)
+tree.graph.visualize()
+tree.visualize()

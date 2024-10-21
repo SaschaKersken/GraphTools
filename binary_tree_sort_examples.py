@@ -1,0 +1,16 @@
+from binary_tree_sort import BinaryTreeSort
+
+sort_tree = BinaryTreeSort()
+sort_tree.insert(15)
+sort_tree.insert(2)
+sort_tree.insert(8)
+sort_tree.insert(17)
+sort_tree.insert(17)
+sort_tree.insert(21)
+sort_tree.insert(6)
+sort_tree.insert(12)
+sort_tree.insert(14)
+sort_tree.insert(16)
+print(sort_tree)
+print(sort_tree.get_sorted())
+sort_tree.visualize()
