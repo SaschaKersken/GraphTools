@@ -149,7 +149,7 @@ def is_bipartite(graph):
     
 # Handelt es sich um den Graphen K5?
 def is_k5(graph):
-    return is_connected(graph) and len(graph.vertices) == 5 and len(graph.edges) == 20
+    return is_connected(graph) and len(graph.vertices) == 5 and len(graph.unique_edges) == 10
 
 # Handelt es sich um den Graphen K3,3?
 def is_k3_3(graph):

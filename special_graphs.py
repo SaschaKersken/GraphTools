@@ -19,14 +19,14 @@ k5.visualize(pos5)
 c5.visualize(pos5)
 
 k3_3 = Graph()
-
+k3_3.add_vertices(['A', 'B', 'C', 'D', 'E', 'F'])
 k3_3.add_edges([('A', 'D'), ('A', 'E'), ('A', 'F')])
 k3_3.add_edges([('B', 'D'), ('B', 'E'), ('B', 'F')])
 k3_3.add_edges([('C', 'D'), ('C', 'E'), ('C', 'F')])
 
 pos3_3 = {'A': (-1, 1), 'B': (0, 1), 'C': (1, 1), 'D': (-1, -1), 'E': (0, -1), 'F': (1, -1)}
 
-k3_3.visualize(pos3_3, colors=['#FFFF00', '#FF00FF', '#FF00FF', '#FF00FF', '#FFFF00', '#FFFF00'])
+k3_3.visualize(pos3_3, color_map={'A': '#FFFF00', 'B': '#FFFF00', 'C': '#FFFF00', 'D': '#FF00FF', 'E': '#FF00FF', 'F': '#FF00FF'})
 
 k3_3_plus_edge = deepcopy(k3_3)
 k3_3_plus_edge.add_edge('A', 'B')

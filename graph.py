@@ -105,10 +105,16 @@ class Graph:
         return matrix
 
     # Visualisierung
-    def visualize(self, pos = None, colors = None):
+    def visualize(self, pos=None, color_map=None):
         plot = nx.Graph()
         plot.add_nodes_from(self.vertices)
         plot.add_edges_from(self.edges)
+        colors = None
+        if color_map is not None:
+            colors = []
+            for vertex in self.vertices:
+                if vertex in color_map:
+                    colors.append(color_map[vertex])
         nx.draw(plot, pos, with_labels = True, node_color=colors)
         plt.show()
 
