@@ -12,7 +12,7 @@ for v_from in kn.vertices:
 pos = {}
 for i, vertex in enumerate(kn.vertices):
     theta = i * (2 * math.pi / n)
-    pos[vertex] = (math.cos(theta), math.sin(theta))
+    pos[vertex] = (math.sin(theta), math.cos(theta))
 print(f"K{n}")
 print(kn)
 kn.visualize(pos)
