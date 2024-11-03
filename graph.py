@@ -105,7 +105,7 @@ class Graph:
         return matrix
 
     # Visualisierung
-    def visualize(self, pos=None, color_map=None):
+    def visualize(self, pos=None, color_map=None, caption=None):
         plot = nx.Graph()
         plot.add_nodes_from(self.vertices)
         plot.add_edges_from(self.edges)
@@ -115,6 +115,9 @@ class Graph:
             for vertex in self.vertices:
                 if vertex in color_map:
                     colors.append(color_map[vertex])
+        if caption is not None:
+            plt.figure()
+            plt.title(caption)
         nx.draw(plot, pos, with_labels = True, node_color=colors)
         plt.show()
 

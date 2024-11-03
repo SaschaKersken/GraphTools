@@ -24,7 +24,7 @@ for i, vertex in enumerate(kn.vertices):
 if mode in [COMPLETE, BOTH]:
     print(f"K{n}")
     print(kn)
-    kn.visualize(pos)
+    kn.visualize(pos, caption=f"K{n}")
 if mode in [CYCLE, BOTH]:
     cn = Graph()
     for i in range(1, n + 1):
@@ -38,4 +38,4 @@ if mode in [CYCLE, BOTH]:
             cn.add_edge(v_from, v_to)
     print(f"C{n}")
     print(cn)
-    cn.visualize(pos)
+    cn.visualize(pos, caption=f"C{n}")
